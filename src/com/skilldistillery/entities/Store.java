@@ -62,6 +62,7 @@ public class Store {
 			//Prints when customer is REGISTERED, otherwise people 
 			//existing with the same name is a nonissue
 			System.out.println("That customer is already a member");
+			return;
 		} else {
 		customers.add(customer);
 		System.out.println(customer + "added");

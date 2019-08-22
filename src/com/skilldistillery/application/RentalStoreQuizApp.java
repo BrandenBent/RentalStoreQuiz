@@ -34,6 +34,7 @@ public class RentalStoreQuizApp {
 
 		// ... and register Elmer Fudd as a member of the store's unique customers
 		rents.registerCustomerAtStore(s, ct2);
+
 		
 		// display all customer information at this store:
 		rents.displayData(s);
@@ -51,10 +52,13 @@ public class RentalStoreQuizApp {
 		return customer;
 	}
 
-	public void registerCustomerAtStore(Store st, Customer ct) {
+	public String registerCustomerAtStore(Store st, Customer ct) {
 		st.addCustomer(ct);
-		System.out.println(ct.getFirstName()+ ", " + ct.getLastName() + " has been registered");
 		
+		//put it in a string and returned it to make the Junit work
+		String added = (ct.getFirstName()+ ", " + ct.getLastName() + " has been registered");
+		System.out.println(added);
+		return added;
 	}
 	
 	public void displayData (Store s) {
