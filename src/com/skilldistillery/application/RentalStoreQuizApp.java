@@ -1,6 +1,6 @@
 package com.skilldistillery.application;
 
-import java.util.Set;
+
 
 import com.skilldistillery.entities.Customer;
 import com.skilldistillery.entities.Film;
@@ -40,22 +40,29 @@ public class RentalStoreQuizApp {
 	}
 
 	public Store createStore() {
-		// TODO: implement the method
-		return null;
+		//create instance and return it, use no arg
+		Store store = new Store();
+		return store;
 	}
 
 	public Customer createCustomer(String fn, String ln) {
-		// TODO: implement the method
-		return null;
+		//same as prev, mult params
+		Customer customer = new Customer(fn, ln);
+		return customer;
 	}
 
 	public void registerCustomerAtStore(Store st, Customer ct) {
-		// TODO: implement the method
+		st.addCustomer(ct);
+		System.out.println(ct.getFirstName()+ ", " + ct.getLastName() + " has been registered");
 		
 	}
 	
 	public void displayData (Store s) {
-		// TODO: implement the method
+//		List<Customer> copy = s.getCustomers();
+//		for (Customer customer : copy) {
+//			System.out.println(customer.toString());
+//		}
+		System.out.println(s.toString());
 	
 	}
 }
